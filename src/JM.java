@@ -1,6 +1,6 @@
 /*
- * Реализуйте метод, позволяющий другим методам узнать, откуда их вызвали.
- * Java Core. Практическая задача 4.1.8
+ * Р РµР°Р»РёР·СѓР№С‚Рµ РјРµС‚РѕРґ, РїРѕР·РІРѕР»СЏСЋС‰РёР№ РґСЂСѓРіРёРј РјРµС‚РѕРґР°Рј СѓР·РЅР°С‚СЊ, РѕС‚РєСѓРґР° РёС… РІС‹Р·РІР°Р»Рё.
+ * Java Core. РџСЂР°РєС‚РёС‡РµСЃРєР°СЏ Р·Р°РґР°С‡Р° 4.1.8
  */
 
 public class JM {
@@ -17,9 +17,11 @@ public class JM {
 
 public static String getCallerClassAndMethodName() {
     StackTraceElement[] stackTraceElements = new Exception().getStackTrace();
+
     if (stackTraceElements.length == 2) {
         return null;
     }
+
     return stackTraceElements[2].getClassName() + "#" + stackTraceElements[2].getMethodName();
 }
 }
